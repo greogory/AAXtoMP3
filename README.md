@@ -219,6 +219,12 @@ brew install grep
 brew install findutils
 ```
 
+__Arch Linux, CachyOS, Manjaro__
+```
+sudo pacman -S ffmpeg bc
+```
+Note: Arch-based distributions typically have recent ffmpeg versions in their repositories.
+
 #### mp4art/mp4chaps
 _Note: This is an optional dependency, required for adding cover art to m4a and b4b files only._
 
@@ -241,6 +247,11 @@ __MacOS__
 brew install mp4v2
 ```
 
+__Arch Linux, CachyOS, Manjaro__
+```
+sudo pacman -S mp4v2
+```
+
 #### mediainfo
 _Note: This is an optional dependency._
 
@@ -257,6 +268,12 @@ __MacOS__
 ```
 brew install mediainfo
 ```
+
+__Arch Linux, CachyOS, Manjaro__
+```
+sudo pacman -S mediainfo
+```
+
 ## AAXC files
 The AAXC format is a new Audible encryption format, meant to replace the old AAX.
 The encryption has been updated, and now to decrypt the file the authcode

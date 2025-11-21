@@ -123,11 +123,17 @@ auth_code="hardcoded-auth-here"
 
 **Check for updates:**
 ```bash
-# CachyOS/Arch
+# CachyOS / Arch Linux / Manjaro
 sudo pacman -Syu ffmpeg jq mp4v2-utils
 
-# Ubuntu/Debian
+# Ubuntu / Debian
 sudo apt update && sudo apt upgrade ffmpeg jq mp4v2-utils
+
+# Fedora / RHEL
+sudo dnf upgrade ffmpeg jq mp4v2-utils
+
+# macOS (Homebrew)
+brew update && brew upgrade ffmpeg jq mp4v2-utils
 ```
 
 ### Local Security
