@@ -23,6 +23,9 @@ This is a **casual personal fork** of [KrumpetPirate/AAXtoMP3](https://github.co
 ### Setting Expectations
 
 - I'm not a professional developer, just a sysadmin/hobbyist
+- **Tested only on CachyOS**: I've personally only tested and used this fork on my CachyOS PC
+- I don't have the resources or inclination to test on other platforms
+- However, I sincerely appreciate hearing from other users about their experiences
 - Pull requests welcome, but reviewed casually as time permits
 - No guarantee of response time or ongoing maintenance
 - Use at your own risk, no warranties implied
