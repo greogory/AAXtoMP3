@@ -798,11 +798,11 @@ do
       fi
       cp "${extra_cover_file}" "${cover_file}"
     else
-      # Audible-cli not used, extract the cover from the aax file
+      # Audible-cli not used OR cover file missing, extract the cover from the aax/aaxc file
       if [ "$((${loglevel} > 1))" == "1" ]; then
         log "Extracting cover into ${cover_file}..."
       fi
-      </dev/null "$FFMPEG" -loglevel error -activation_bytes "${auth_code}" -i "${aax_file}" -an -codec:v copy "${cover_file}"
+      </dev/null "$FFMPEG" -loglevel error ${decrypt_param} -i "${aax_file}" -an -codec:v copy "${cover_file}"
     fi
   fi
 
@@ -960,6 +960,9 @@ do
       if [ "${audibleCli}" == "1" ] && [[ -n "${tmp_chapter_file:-}" ]] && [[ -f "${tmp_chapter_file}" ]]; then
         mv "${tmp_chapter_file}" "${output_directory}/${currentFileNameScheme}.chapters.txt"
       else
+        if [ "$((${loglevel} > 1))" == "1" ]; then
+          log "Extracting chapter information from ${aax_file}..."
+        fi
         "$FFPROBE" -i "${aax_file}" -print_format csv -show_chapters 2>/dev/null | awk -F "," '{printf "CHAPTER%d=%02d:%02d:%02.3f\nCHAPTER%dNAME=%s\n", NR, $5/60/60, $5/60%60, $5%60, NR, $8}' > "${output_directory}/${currentFileNameScheme}.chapters.txt"
       fi
       $SED -i 's/\,000/\.000/' "${output_directory}/${currentFileNameScheme}.chapters.txt"
