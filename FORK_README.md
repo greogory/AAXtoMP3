@@ -4,6 +4,15 @@
 
 > **📜 Original Work**: This fork is based on [AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) by **KrumpetPirate** and 55+ community contributors. All credit for the core functionality goes to the original authors. This fork only adds minor bug fixes and improvements.
 
+---
+
+**Fork Version**: 1.0 (6 commits ahead) | **Original**: [KrumpetPirate/AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) (archived)
+**License**: WTFPL v2 | **Platform**: Linux (Tested: CachyOS) | **Language**: Bash
+**Dependencies**: ffmpeg 4.4+, jq, bash 3.2.57+
+**Fork Improvements**: AAXC fallback handling, enhanced logging, security docs, multi-distro support
+
+---
+
 ## About This Fork
 
 This is a **casual personal fork** of [KrumpetPirate/AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) with improvements for AAXC file handling. The original project has been archived by its maintainer.
@@ -195,8 +204,34 @@ For additional legal and security considerations, see [SECURITY.md](SECURITY.md)
 
 **Last Updated:** 2025-11-21
 **Upstream:** KrumpetPirate/AAXtoMP3 (archived)
-**Commits Ahead:** 2
+**Commits Ahead:** 6
 **Maintenance Level:** Casual / As-needed
+
+---
+
+## References & Related Projects
+
+### Upstream Project
+- **Original AAXtoMP3**: [KrumpetPirate/AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) (archived)
+- **Original Documentation**: [AAXtoMP3 Wiki](https://krumpetpirate.github.io/AAXtoMP3/)
+
+### Related Tools
+- **audible-cli**: [mkb79/audible-cli](https://github.com/mkb79/audible-cli) - CLI for Audible (used for metadata extraction)
+- **FFmpeg**: [ffmpeg.org](https://ffmpeg.org/) - Multimedia framework (core dependency)
+- **inAudible**: [inAudible-NG](https://github.com/inAudible-NG) - Tools for Audible activation
+
+### Community
+- **Audible subreddit**: [r/audible](https://www.reddit.com/r/audible/)
+- **Audiobook subreddit**: [r/audiobooks](https://www.reddit.com/r/audiobooks/)
+
+### Legal Resources
+- **DMCA Information**: [U.S. Copyright Office](https://www.copyright.gov/dmca/)
+- **Audible Terms of Service**: [Audible ToS](https://www.audible.com/conditions-of-use)
+
+### Technical Documentation
+- **AAX Format**: Audible's DRM-protected audio format
+- **AAXC Format**: Newer Audible encryption format (requires voucher files)
+- **MP4v2 Tools**: [enzo1982/mp4v2](https://github.com/enzo1982/mp4v2) - MP4 metadata utilities
 
 ---
 
