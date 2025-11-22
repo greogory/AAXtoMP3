@@ -6,7 +6,7 @@
 
 ---
 
-**Fork Version**: 2.0 | **Original**: [KrumpetPirate/AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) v1.3 (archived)
+**Fork Version**: 2.1 | **Original**: [KrumpetPirate/AAXtoMP3](https://github.com/KrumpetPirate/AAXtoMP3) v1.3 (archived)
 **License**: WTFPL v2 | **Platform**: Linux (Tested: CachyOS) | **Language**: Bash
 **Dependencies**: ffmpeg 4.4+, jq, bash 3.2.57+
 **Fork Improvements**: AAXC fallback handling, enhanced logging, security docs, multi-distro support
@@ -202,10 +202,10 @@ For additional legal and security considerations, see [SECURITY.md](SECURITY.md)
 
 ## Fork Status
 
-**Current Version:** 2.0 ([Release](https://github.com/greogory/AAXtoMP3/releases/tag/v2.0))
-**Last Updated:** 2025-11-21
+**Current Version:** 2.1 ([Release](https://github.com/greogory/AAXtoMP3/releases/tag/v2.1))
+**Last Updated:** 2025-11-22
 **Upstream:** KrumpetPirate/AAXtoMP3 v1.3 (archived)
-**Commits Ahead:** 7
+**Commits Ahead:** 8
 **Maintenance Level:** Casual / As-needed
 
 ---
