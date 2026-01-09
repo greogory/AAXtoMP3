@@ -1,0 +1,44 @@
+name: "Shell Script Analysis"
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM UTC
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Run ShellCheck
+      uses: ludeeus/action-shellcheck@master
+      with:
+        severity: warning
+        scandir: '.'
+        format: gcc
+      env:
+        SHELLCHECK_OPTS: -e SC1091 -e SC2034  # Ignore sourced files and unused vars
+
+  shfmt:
+    name: Shell Formatting
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install shfmt
+      run: |
+        curl -sS https://webi.sh/shfmt | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Check shell formatting
+      run: |
+        shfmt -d -i 4 -ci $(find . -name "*.sh" -type f) || echo "::warning::Some files need formatting"
